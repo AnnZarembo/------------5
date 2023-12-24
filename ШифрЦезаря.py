@@ -22,7 +22,7 @@ def rashifr(text, shift):
 
 alphabet_of_exceptions = '.!?&*(|\/}]№;%:@#$%^* <>,-=~123456)_+{["7890'
 ok = False
-while is ok == False:
+while ok == False:
         a1 = True
         a2 = True
         text = input('Введите текст: ')
@@ -38,11 +38,12 @@ while is ok == False:
             print('Введите текст на русском языке')
         else:
             ok = True
-while True:
-    try:
-        shift = int(input('Введите шаг сдвига (целое число):'))
-        break
-    except ValueError:
+ok2 = False
+while ok == False:
+    shift = input('Введите шаг сдвига (целое число):')
+    if type(shift)==int() and shift > 0:
+        ok2 == True
+    else:
         print('Шаг сдвига должен быть целым числом')
 
 shifr_text = shifr(text, shift)
