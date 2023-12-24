@@ -41,7 +41,7 @@ while ok == False:
 ok2 = False
 while ok2 == False:
     shift = input('Введите шаг сдвига (целое число):')
-    if type(shift)==int() and shift > 0:
+    if isinstance(shift,int) and shift > 0:
         ok2 == True
     else:
         print('Шаг сдвига должен быть целым числом')
